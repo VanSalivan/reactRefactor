@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // Внутрениие;
-import App from './components/App';
+import App from './layout/App';
 
 import './index.css';
 

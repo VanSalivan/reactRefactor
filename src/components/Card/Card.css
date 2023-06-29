@@ -1,0 +1,110 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card__title {
+  margin: 25px 0 31px 21px;
+  max-width: 184px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.card__like-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  margin-right: 20px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.card__like-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__like {
+  cursor: pointer;
+  margin-top: 22px;
+  margin-right: 20px;
+  padding:0;
+  justify-content: center;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  /* background-image: url('../../../images/Vectorlike__icon.svg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__like:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+
+.card__liked {
+  cursor: pointer;
+  margin-top: 22px;
+  margin-right: 20px;
+  padding:0;
+  justify-content: center;
+  width: 30px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  /* background-image: url('../../../images/Unionlike__actived.svg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__liked:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.card__image {
+  width: 100%;
+  height:282px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card__delete-button {
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  width: 18px;
+  height: 19px;
+  border: none;
+  background-color: transparent;
+  /* background-image: url('../../../images/Grouptrash.svg'); */
+  background-size: 18px 19px;
+  background-repeat: no-repeat;
+  transition: .7s ease;
+}
+
+.card__delete-button:hover {
+  cursor: pointer;
+  opacity: .5;
+}
