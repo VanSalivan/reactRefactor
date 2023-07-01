@@ -1,7 +1,7 @@
 // Внешнее
 import React from 'react';
 
-// Внутренее
+// components
 import CardList from '../../modules/CardList/CardList';
 import Profile from '../../modules/Profile/Profile';
 

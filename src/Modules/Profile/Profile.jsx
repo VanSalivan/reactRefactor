@@ -1,23 +1,34 @@
 // Внешнее
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // Внутренее
-import avatar from '../../assets/images/imageavatar.svg';
+import { getProfile } from '../../api/profile';
 
+import avatar from '../../assets/images/imageavatar.svg';
 import './Profile.css';
 
 function Profile() {
+  const [profile, setProfile] = useState({});
+
+  useEffect(() => {
+    getProfile().then((profile) => setProfile(profile));
+  }, []);
+
   return (
-    <section class='profile'>
-      <div class='profile__avatar-container'>
-        <img src={avatar} alt='Фотография человека' class='profile__avatar' />
-        <button class='profile__avatar-button'/>
+    <section className='profile'>
+      <div className='profile__avatar-container'>
+        <img
+          src={profile.avatar || avatar}
+          alt='Фотография человека'
+          className='profile__avatar'
+        />
+        <button className='profile__avatar-button' />
       </div>
-      <div class='profile__info'>
-        <h1 class='profile__author'>223</h1>
-        <button class='profile__edit' type='button' />
-        <p class='profile__bio'>111</p>
+      <div className='profile__info'>
+        <h1 className='profile__author'>{profile.name}</h1>
+        <button className='profile__edit' type='button' />
+        <p className='profile__bio'>{profile.about}</p>
       </div>
-      <button class='profile__add-button' type='button' />
+      <button className='profile__add-button' type='button' />
     </section>
   );
 }
