@@ -1,7 +1,7 @@
 // Внутрренее
-import Header from '../Header';
-import Content from '../Content';
-import Footer from '../Footer/Footer';
+import Header from '../layout/Header';
+import Content from '../layout/Content';
+import Footer from '../layout/Footer/Footer';
 
 import './App.css'
 

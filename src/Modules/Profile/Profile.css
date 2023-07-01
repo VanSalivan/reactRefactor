@@ -1,0 +1,203 @@
+.profile {
+  display: flex;
+  max-width: 880px;
+  margin: 40px auto auto;
+}
+
+@media screen and (max-width: 923px) {
+  .profile {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 763px) {
+  .profile {
+    max-width: 650px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .profile {
+    max-width: 282px;
+    flex-direction: column;
+    margin: 42px auto auto;
+  }
+}
+
+.profile__info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  max-width: 336px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__info {
+    max-width: 282px;
+    margin: 22.5px auto auto;
+  }
+}
+
+.profile__edit {
+  margin: 0;
+  margin-top: 37px;
+  margin-left: 18px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  align-content: baseline;
+  background-image: url('../../assets/images/pencill.svg');
+  background-size: cover;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  border: 1px solid #ffffff;
+}
+
+.profile__edit:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__edit {
+    margin: 0;
+    margin-top: 8px;
+    margin-left: 10px;
+    height: 18px;
+    width: 18px;
+    background-size: 7.5px 7.5px;
+    background-position: 50% 50%;
+  }
+}
+
+.profile__bio {
+  margin: 0;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 25px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__bio {
+    margin: 0;
+    margin: 14px auto auto;
+    max-width: 282px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.profile__avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 150px;
+}
+.profile__avatar-container:hover .profile__avatar-button {
+  opacity: 1;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__avatar-container {
+    align-self: center;
+  }
+}
+
+.profile__avatar-button {
+  position: absolute;
+  transform: translate(0%, 0%);
+  width: 26px;
+  height: 26px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  background-image: url('../../assets/images/pencil_avatar.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.profile__avatar-container:hover .profile__avatar {
+  opacity: 0.2;
+}
+
+.profile__author {
+  margin: 0;
+  margin-top: 22px;
+  max-width: 294px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 114%;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__author {
+    margin: 0;
+    margin-left: 46px;
+    max-width: 189px;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+.profile__add-button {
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  border: 2px solid #ffffff;
+  background-color: black;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  background-image: url('../../assets/images/add.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__add-button {
+    margin: 0;
+    margin: 36px auto auto;
+    width: 282px;
+    background-size: 16px 16px;
+  }
+}
