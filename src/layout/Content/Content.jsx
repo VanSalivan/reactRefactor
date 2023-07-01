@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Внутренее
-import CardList from '../../Modules/CardList/CardList';
+import CardList from '../../modules/CardList/CardList';
 
 function Content() {
   return (
