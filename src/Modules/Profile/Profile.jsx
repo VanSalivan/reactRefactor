@@ -6,7 +6,7 @@ import { getProfile } from '../../api/profile';
 import avatar from '../../assets/images/imageavatar.svg';
 import './Profile.css';
 
-function Profile() {
+function Profile({ openCreateModal }) {
   const [profile, setProfile] = useState({});
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function Profile() {
         <button className='profile__edit' type='button' />
         <p className='profile__bio'>{profile.about}</p>
       </div>
-      <button className='profile__add-button' type='button' />
+      <button className='profile__add-button' onClick={openCreateModal} />
     </section>
   );
 }
