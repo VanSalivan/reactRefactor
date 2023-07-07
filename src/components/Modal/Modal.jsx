@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 // Внутренний
 import './Modal.css';
 
-function Modal({ open, title, children, handleClose }) {
+function Modal({ open, title, children, onClose }) {
   return createPortal(
     <div className={`modal ${open ? 'active' : ''}`}>
       <div className='modal__container'>
@@ -12,7 +12,7 @@ function Modal({ open, title, children, handleClose }) {
           <h2 className='modal__title'>{title}</h2>
           {children}
         </div>
-        <button className='modal__close-icon' onClick={handleClose} />
+        <button className='modal__close-icon' onClick={onClose} />
       </div>
     </div>,
     document.body,

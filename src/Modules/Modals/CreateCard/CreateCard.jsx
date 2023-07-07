@@ -3,9 +3,9 @@ import React from 'react';
 // Внутренний
 import Modal from '../../../components/Modal';
 
-function ModalCreateCard({ open, handleClose }) {
+function CreateCard({ open, handleClose }) {
   return (
-    <Modal open={open} title={'Новое место'} handleClose={handleClose}>
+    <Modal open={open} title={'Новое место'} onClose={handleClose}>
       <form noValidate>
         <div className='modal__inputs'>
           <input
@@ -43,4 +43,4 @@ function ModalCreateCard({ open, handleClose }) {
   );
 }
 
-export default ModalCreateCard;
+export default CreateCard;
