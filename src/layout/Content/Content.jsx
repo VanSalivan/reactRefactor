@@ -24,9 +24,15 @@ function Content() {
 
   return (
     <main>
-      <CreateCard open={isCreateCardModalVisible} handleClose={hideModal} />
-      <EditProfile open={isEditProfileModalVisible} handleClose={hideModal} />
-      <EditAvatar open={isEditAvatarModalVisible} handleClose={hideModal} />
+      {isCreateCardModalVisible && (
+        <CreateCard open={isCreateCardModalVisible} handleClose={hideModal} />
+      )}{' '}
+      {isEditProfileModalVisible && (
+        <EditProfile open={isEditProfileModalVisible} handleClose={hideModal} />
+      )}
+      {isEditAvatarModalVisible && (
+        <EditAvatar open={isEditAvatarModalVisible} handleClose={hideModal} />
+      )}
       <Profile
         showCreateCard={showCreateCard}
         showEditProfile={showEditProfile}

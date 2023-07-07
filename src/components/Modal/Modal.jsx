@@ -5,9 +5,21 @@ import { createPortal } from 'react-dom';
 import './Modal.css';
 
 function Modal({ open, title, children, onClose }) {
+  const stopPropagation = (e) => e.stopPropagation();
+
+  const handleKeyDown = (e) => {
+    if (e.code === 'Escape') {
+      onClose();
+    }
+  };
+
   return createPortal(
-    <div className={`modal ${open ? 'active' : ''}`}>
-      <div className='modal__container'>
+    <div
+      className={`${open ? 'modal active' : 'modal'}`}
+      onClick={onClose}
+      onKeyDown={handleKeyDown}
+    >
+      <div className='modal__container' onClick={stopPropagation}>
         <div className='modal__content'>
           <h2 className='modal__title'>{title}</h2>
           {children}
