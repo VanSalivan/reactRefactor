@@ -1,7 +1,7 @@
 // Внешний
 import React, { useState } from 'react';
 // Внутренний
-import { putLike, deleteLike } from '../../api/card';
+import { putLike, deleteLike } from '../../../api/card';
 
 import './Card.css';
 

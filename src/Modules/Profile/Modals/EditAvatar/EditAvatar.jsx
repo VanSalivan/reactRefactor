@@ -1,8 +1,8 @@
 // Внешний
 import React from 'react';
 // Внутренний
-import Modal from '../../../components/Modal';
-import Input from '../../../components/Input';
+import Modal from '../../../../components/Modal';
+import Input from '../../../../components/Input';
 
 function EditAvatar({ open, handleClose }) {
   return (

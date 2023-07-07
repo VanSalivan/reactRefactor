@@ -47,7 +47,7 @@
   height: 24px;
   width: 24px;
   align-content: baseline;
-  background-image: url('../../assets/images/pencill.svg');
+  background-image: url('../Profile/images/pencill.svg');
   background-size: cover;
   background-size: 10px;
   background-repeat: no-repeat;
@@ -121,11 +121,12 @@
 .profile__avatar-button {
   position: absolute;
   transform: translate(0%, 0%);
-  width: 26px;
-  height: 26px;
+  width: 100px;
+  height: 100px;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
-  background-image: url('../../assets/images/pencil_avatar.svg');
+  background-image: url('../Profile/images/pencill.svg');
+  background-size: 30px 30px;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -181,7 +182,7 @@
   margin-left: auto;
   margin-top: 35px;
   margin-bottom: 35px;
-  background-image: url('../../assets/images/add.svg');
+  background-image: url('../Profile/images/add.svg');
   background-repeat: no-repeat;
   background-position: center;
 }

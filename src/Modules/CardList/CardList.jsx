@@ -1,7 +1,7 @@
 // Внешнее
 import React, { useEffect, useState } from 'react';
 // Внутренее
-import Card from '../../components/Card/Card';
+import Card from './Card';
 import { getCards, deleteCard } from '../../api/card';
 import { getProfile } from '../../api/profile';
 
