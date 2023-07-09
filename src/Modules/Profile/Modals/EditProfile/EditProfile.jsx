@@ -1,33 +1,71 @@
 // Внешний
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 // Внутренний
 import Modal from '../../../../components/Modal';
+import Button from '../../../../components/Button';
 import Input from '../../../../components/Input';
 
 function EditProfile({ open, handleClose }) {
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    setFocus,
+  } = useForm({
+    mode: 'onChange',
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  useEffect(() => {
+    setFocus('place_name');
+  }, []);
+
   return (
     <Modal open={open} title={'Редактировать профиль'} onClose={handleClose}>
-      <form noValidate>
-        <Input
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className={`input-text ${
+            errors?.name?.message ? 'input-text_invalid' : ''
+          }`}
           type='text'
-          name='name'
           placeholder='Ваше имя'
-          required
-          minLength='2'
-          maxLength='40'
-          autoFocus
+          {...register('name', {
+            required: 'Поле обязательно к заполенению',
+            minLength: {
+              value: 2,
+              message: 'Минимум 2 символа',
+            },
+            maxLength: {
+              value: 40,
+              message: 'Максимум 40 символов',
+            },
+          })}
         />
-        <Input
+        <span className='input-text__error'>{errors?.name?.message}</span>
+        <input
+          className={`input-text ${
+            errors?.bio?.message ? 'input-text_invalid' : ''
+          }`}
           type='text'
-          name='bio'
           placeholder='Ваша специальность'
-          required
-          minLength='2'
-          maxLength='200'
+          {...register('bio', {
+            required: 'Поле обязательно к заполенению',
+            minLength: {
+              value: 2,
+              message: 'Минимум 2 символа',
+            },
+            maxLength: {
+              value: 200,
+              message: 'Максимум 200 символов',
+            },
+          })}
         />
-        <button className='modal__button' type='submit'>
-          Сохранить
-        </button>
+        <span className='input-text__error'>{errors?.bio?.message}</span>
+        <Button disabled={!isValid}>Сохранить</Button>
       </form>
     </Modal>
   );

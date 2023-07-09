@@ -10,12 +10,8 @@
   color: #000000;
 }
 
-.input-text_invalid {
-  border-bottom: 1px solid #ff0000;
-}
-
 .input-text__error {
-  margin: 5px 36px;
+  margin: 5px 0;
   display: block;
   font-family: 'Inter';
   font-style: normal;
@@ -24,4 +20,8 @@
   line-height: 15px;
   color: #ff0000;
   min-height: 30px;
+}
+
+.input-text_invalid {
+  border-bottom: 1px solid #ff0000;
 }
